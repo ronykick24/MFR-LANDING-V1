@@ -1,0 +1,57 @@
+mfr_channels:
+  - name: RPS2
+    group: phase_2mhz
+    h0_ft: 8.0
+    s_ft: 2.0
+    sigma_rel: 0.05
+    enabled: true
+  - name: RPM2
+    group: phase_2mhz
+    h0_ft: 10.0
+    s_ft: 2.5
+    sigma_rel: 0.05
+    enabled: true
+  - name: RPD2
+    group: phase_2mhz
+    h0_ft: 12.0
+    s_ft: 3.0
+    sigma_rel: 0.05
+    enabled: true
+
+  - name: RPS4
+    group: phase_400khz
+    h0_ft: 12.0
+    s_ft: 3.0
+    sigma_rel: 0.07
+    enabled: true
+  - name: RPM4
+    group: phase_400khz
+    h0_ft: 15.0
+    s_ft: 3.5
+    sigma_rel: 0.07
+    enabled: true
+  - name: RPD4
+    group: phase_400khz
+    h0_ft: 18.0
+    s_ft: 4.0
+    sigma_rel: 0.07
+    enabled: true
+
+  - name: RAD2
+    group: att
+    h0_ft: 16.0
+    s_ft: 5.5
+    sigma_rel: 0.18
+    enabled: false
+  - name: RAD4
+    group: att
+    h0_ft: 24.0
+    s_ft: 6.0
+    sigma_rel: 0.18
+    enabled: false
+
+defaults:
+  dbb_ft: 40.0
+  dip_app_deg: 3.0
+  bit_margin_ft: 3.0
+  mud_system: WBM

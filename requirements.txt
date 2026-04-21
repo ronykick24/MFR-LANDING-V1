@@ -1,0 +1,7 @@
+streamlit>=1.35
+numpy>=1.24
+pandas>=2.0
+plotly>=5.18
+scipy>=1.10
+pyyaml>=6.0
+lasio>=0.31
