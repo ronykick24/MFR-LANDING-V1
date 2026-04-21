@@ -4,23 +4,23 @@ def decision_events(out: pd.DataFrame, warn_ft: float, action_ft: float, stop_ft
     rows = []
     last = None
     for _, r in out.iterrows():
-        h = r.get('DTB_Target_Bit_ft')
+        h = r.get("DTB_Target_Bit_ft")
         if pd.isna(h):
             continue
-        md = float(r['MD'])
-        c = float(r.get('Confidence', 0.0))
-        mode = str(r.get('Mode','below'))
+        md = float(r["MD"])
+        c = float(r.get("Confidence", 0.0))
+        mode = str(r.get("Mode", "below"))
 
         state = None
         if h <= stop_ft:
-            state = 'STOP'
+            state = "STOP"
         elif h <= action_ft:
-            state = 'ACTION'
+            state = "ACTION"
         elif h <= warn_ft:
-            state = 'WARN'
+            state = "WARN"
 
         if state and state != last:
-            rows.append({'MD': md, 'Mode': mode, 'Event': state, 'DTB_Target_Bit_ft': float(h), 'Confidence': c})
+            rows.append({"MD": md, "Mode": mode, "Event": state, "DTB_Target_Bit_ft": float(h), "Confidence": c})
             last = state
 
     return pd.DataFrame(rows)
