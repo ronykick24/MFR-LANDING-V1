@@ -37,6 +37,7 @@ mfr_channels:
     sigma_rel: 0.07
     enabled: true
 
+  # Attenuation opcional
   - name: RAD2
     group: att
     h0_ft: 16.0
